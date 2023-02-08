@@ -1,0 +1,113 @@
+body {
+    background-color: lightseagreen;
+}
+
+button:hover {
+    color: rgb(164, 14, 14);
+}
+
+.create {
+    cursor: pointer;
+    height: 40px;
+    width: 120px;
+    margin: 20px;
+    border-radius: 20%;
+    background-color: rgb(95, 232, 95);
+}
+
+.book-filter {
+    background-color: rgb(146, 73, 198);
+    padding: 10px;
+    margin: 20px;
+}
+
+.book-filter hr {
+    margin: 30px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+thead {
+    background-color: lightblue;
+}
+
+td button {
+    cursor: pointer;
+    text-transform: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: large;
+    color: white;
+    height: 30px;
+    width: 80px;
+}
+
+tr button.read {
+    background-color: blue;
+}
+
+tr button.update {
+    background-color: orange;
+}
+
+tr button.delete {
+    background-color: red;
+}
+
+.books-container {
+    background-color: aqua;
+    font-size: larger;
+    border: 1px solid black;
+}
+
+
+.modal {
+    color: white;
+    background-color: #111;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    left: 150%;
+    height: 80vh;
+    min-width: 300px;
+    text-align: center;
+}
+
+.modal.open {
+    left: 50%;
+    transition: left .5s;
+}
+
+.modal h2 {
+    color: lightcoral;
+    text-decoration: overline;
+    text-transform: capitalize;
+}
+
+.modal h3 span {
+    color: white;
+}
+
+.modal>p {
+    text-align: left;
+}
+
+.modal span.rating {
+    background-color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    min-width: 40px;
+    padding-bottom: 3px;
+    margin-bottom: 40px;
+    color: black;
+    text-align: center;
+}
+
+.modal button {
+    margin: 10px;
+}

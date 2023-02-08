@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Book Shop</title>
+</head>
+
+<body onload="onInit()">
+    <h1>Welcome to my bookshop</h1>
+    <button class="create" onclick="onCreateNewBook()">Create new book</button>
+    <section class="book-filter">
+        <h2>Filter</h2>
+        <select class="filter-rating-select" onchange="onSetFilterBy({rating: this.value})">
+        </select>
+        <label>
+            Min Price:
+            <input type="range" min="0" max="30" value="0.5" class="filter-price-range"
+                onchange="this.title=this.value;onSetFilterBy({minPrice: this.value})" />
+        </label>
+        <hr />
+        Sort by:
+        <select class="sort-by" onchange="onSetSortBy()">
+            <option value="">Select Sorting</option>
+            <option value="maxPrice">By Price</option>
+            <option value="maxRate">Rating</option>
+        </select>
+        <label>
+            Descending
+            <input class="sort-desc" type="checkbox" oninput="onSetSortBy()" />
+        </label>
+    </section>
+    <div>
+        <table style="width: 80%;">
+            <thead>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Rating</th>
+                <th colspan="3">Actions</th>
+            </thead>
+            <tbody class="books-container">
+            </tbody>
+        </table>
+        <div class="modal">
+            <h2></h2>
+            <h3>Price <span></span>$ </h3>
+            <h4>Book Description</h4>
+            <p></p>
+            <div>
+                <button onclick="onLowerRating()" class="lower">-</button>
+                <span class="rating"></span>
+                <button onclick="onRaiseRating()" class="raise">+</button>
+            </div>
+            <button onclick="onCloseModal()">Close</button>
+        </div>
+        <script src="js/services/util-service.js"></script>
+        <script src="js/services/book-service.js"></script>
+        <script src="js/book-controller.js"></script>
+</body>
+
+</html>
